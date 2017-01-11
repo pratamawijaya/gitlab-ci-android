@@ -26,6 +26,7 @@ RUN apt-get -qq update && \
       lib32stdc++6 \
       lib32gcc1 \
       lib32ncurses5 \
+      git \
       lib32z1 \
       unzip \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
