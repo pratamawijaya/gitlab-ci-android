@@ -34,6 +34,6 @@ build:
 - git clone url-dockerfile
 - run `docker build -t image_name .`
 - `docker image ls` for checking image
-- `docker tage commitid pratamawijaya/gitlab-ci-android`
+- `docker tag commitid pratamawijaya/gitlab-ci-android`
 - `docker login`
 - `docker push`
