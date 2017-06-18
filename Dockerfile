@@ -14,7 +14,7 @@ ENV ANDROID_HOME "/sdk"
 ENV PATH "$PATH:${ANDROID_HOME}/tools"
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apk update && apk add openjdk-8-jdk bash git unzip curl
+RUN apk update && apk add openjdk8-jre bash git unzip curl
 
 RUN rm -f /etc/ssl/certs/java/cacerts; \
     /var/lib/dpkg/info/ca-certificates-java.postinst configure
