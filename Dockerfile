@@ -4,7 +4,7 @@
 # https://hub.docker.com/r/pratamawijaya/gitlab-ci-android/
 #
 
-FROM ubuntu:16.04
+FROM alpine:3.6
 MAINTAINER Pratama Wijaya <set.mnemonix@gmail.com>
 
 #https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
@@ -14,19 +14,7 @@ ENV ANDROID_HOME "/sdk"
 ENV PATH "$PATH:${ANDROID_HOME}/tools"
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -qq update && \
-    apt-get install -qqy --no-install-recommends \
-      curl \
-      html2text \
-      openjdk-8-jdk \
-      libc6-i386 \
-      lib32stdc++6 \
-      lib32gcc1 \
-      lib32ncurses5 \
-      git \
-      lib32z1 \
-      unzip \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk update && apk add openjdk-8-jdk bash git unzip curl
 
 RUN rm -f /etc/ssl/certs/java/cacerts; \
     /var/lib/dpkg/info/ca-certificates-java.postinst configure
