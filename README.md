@@ -36,4 +36,4 @@ build:
 - `docker image ls` for checking image
 - `docker tag commitid pratamawijaya/gitlab-ci-android:versiontag`
 - `docker login`
-- `docker push`
+- `docker push pratamawijaya/gitlab-ci-android:versiontag`
