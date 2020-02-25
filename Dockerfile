@@ -8,7 +8,7 @@ FROM ubuntu:16.04
 MAINTAINER Pratama Wijaya <set.mnemonix@gmail.com>
 
 #https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
-ENV VERSION_SDK_TOOLS "3859397"
+ENV VERSION_SDK_TOOLS "4333796"
 
 ENV ANDROID_HOME "/sdk"
 ENV PATH "$PATH:${ANDROID_HOME}/tools"
